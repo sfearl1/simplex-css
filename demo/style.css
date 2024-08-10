@@ -1,0 +1,97 @@
+@layer base {
+  
+    :root {
+      --text-color: #dddddd;
+      --white: rgb(255 255 255 / 0.8);
+      --black: rgb(0 0 0 / 1);
+      --bg-color: #000000;
+      background: var(--bg-color);
+      color: var(--text-color);
+    }
+    
+    html, body {
+      height: 100vh;
+      width: 100vw;
+      margin: 0;
+    }
+    
+    body {
+      display: grid;
+      
+      &::before,
+      &::after {
+        font-family: "Jura";
+        position: absolute;
+        z-index: 0;
+        grid-area: 1/1;
+        content: "simplex.css";
+        font-size: 3rem;
+        letter-spacing: 0.2rem;
+        text-align: center;
+        place-self: center;
+        pointer-events: none;
+      }
+      
+      &::after {
+        font-family: "Teko";
+        font-size: 1.6rem;
+        letter-spacing: normal;
+        content: "A Simplex Noise CSS Paint Worklet";
+        padding: 5.5rem 0 0;
+      }
+    }
+  }
+  
+@layer simplex {
+
+  @property --animate {
+    syntax: "<number>";
+    initial-value: 0;
+    inherits: false;
+  }
+  
+  @property --blend-mode {
+    syntax: "<lighter | multiply | screen | overlay | darken | lighten | color-dodge | color-burn | hard-light | soft-light | difference | exclusion | hue | saturation | color | luminosity>";
+    initial-value: lighter;
+    inherits: false;
+  }
+  
+  @property --t {
+    syntax: "<number>";
+    initial-value: 0;
+    inherits: false;
+  }
+
+  @keyframes tick {
+    from {
+      --t: 0;
+    }
+    to {
+      --t: 86400000;
+    }
+  }
+  
+  .simplex {
+    --seed: 55555;
+    --color: #a0a0a0;
+    --line-width: 0.05;
+    --line-count: 850;
+    --amplitude: 1;
+    --frequency: 0.3;
+    --scale-x: 1;
+    --scale-y: 1;
+    --overall-scale: 1;
+    --angle: 0;
+    --opacity: 1;
+    --smoothing: 10;
+    --line-spacing: 1;
+    /* Note: To animate, set --play-state to running but be aware it may impact performance. */
+    --speed: 0.2;
+    --play-state: paused;
+    --animate: calc(mod(var(--t) / 50000, 50000));
+
+    background-image: paint(simplex);
+    animation: tick 86400000ms linear infinite;
+    animation-play-state: var(--play-state, paused);
+  }
+}

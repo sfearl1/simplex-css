@@ -1,0 +1,35 @@
+{
+  "name": "simplex.css",
+  "version": "1.0.0",
+  "description": "A CSS Houdini Paint Worklet for creating simplex noise patterns directly in your stylesheets.",
+  "main": "dist/simplex-css.bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sfearl1/simplex-css.git"
+  },
+  "keywords": [
+    "CSS",
+    "Houdini",
+    "Paint",
+    "Worklet",
+    "Simplex",
+    "Noise"
+  ],
+  "author": "Scott Earl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sfearl1/simplex-css/issues"
+  },
+  "homepage": "https://github.com/sfearl1/simplex-css#readme",
+  "dependencies": {
+    "simplex-noise": "^4.0.3"
+  },
+  "devDependencies": {
+    "rollup": "^4.20.0"
+  }
+}
