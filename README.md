@@ -1,6 +1,6 @@
 # simplex-css
 
-![Simplex.css Preview](https://github.com/sfearl1/sfearl1.github.io/blob/0d7649089acbe388f4f76684899885625c9c01a2/paint-worklets/simplex/assets/simplex.png)
+![Simplex.css Preview](https://github.com/sfearl1/sfearl1.github.io/blob/ed03e64e50300cf0518bbc978770dbf03f9078c6/paint-worklets/simplex-css/assets/simplex-css.png)
 
 ## Installation
 
