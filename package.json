@@ -1,6 +1,6 @@
 {
   "name": "simplex.css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CSS Houdini Paint Worklet for creating simplex noise patterns directly in your stylesheets.",
   "main": "dist/simplex-css.bundle.js",
   "scripts": {
